@@ -1,0 +1,41 @@
+
+<!--
+<div *ngFor="let tab of tabs" class="tab">
+<a routerLink="/{{tab.link}}">
+    {{tab.name}}
+</a>
+</div>
+-->
+<!-- 
+<tabset>
+    <tab *ngFor="let tab of tabs" heading={{tab.name}} (select)="onTabSelected(tab.name)">
+   	{{tab.name}}
+				<template>
+                    <a class="routing_link" routerLink={{tab.link}}>{{tab.name}}</a>
+                </template>
+                 
+	</tab>
+</tabset>
+-->
+
+<tabset>
+    <tab *ngFor="let tab of tabs" heading={{tab.name}} (select)="onTabSelected(tab.name)">
+   	</tab>
+</tabset>
+<!--
+<nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" (click)="goHome()">My Test</a> 
+  <ul class="nav navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" (click)="goHome()">Home</a> 
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="goServices()">Services</a> 
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="goAboutUs()">About Us</a> 
+    </li>
+  </ul>
+</nav>
+-->
+  
