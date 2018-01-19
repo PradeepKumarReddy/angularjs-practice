@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AboutUsComponent implements OnInit {
 
   aboutUsDesc = 'This site is under construction, We will come soon';	
+  videoUrl = '/assets/media/Your.mp4';
   constructor() { }
 
   ngOnInit() {

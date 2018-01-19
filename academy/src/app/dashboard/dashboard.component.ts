@@ -23,7 +23,8 @@ export class DashboardComponent implements OnInit {
   initial_tabs: Tab[] = [
   {name : 'Home', link : '/home'},
   {name : 'Services', link : '/services' },
-  { name :'AboutUs', link : '/aboutus'}
+  {name :'AboutUs', link : '/aboutus'},
+  {name :'Login', link : '/login'},
   ]; 
 
   constructor(private router: Router) { }
@@ -55,6 +56,9 @@ export class DashboardComponent implements OnInit {
                 break;
               case 'AboutUs':
                 this.router.navigate(['aboutus']); 
+                break;
+              case 'Login':
+                this.router.navigate(['login']); 
                 break;
               default:
                 this.router.navigate(['']); 
