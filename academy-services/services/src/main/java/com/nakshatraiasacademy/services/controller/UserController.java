@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import com.nakshatraiasacademy.services.model.User;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin
 public class UserController {
 	
 	    @Autowired
@@ -40,9 +42,9 @@ public class UserController {
 	    }
 
 	    @PostMapping("/users")
-	    public User createUser(@Valid @RequestBody User note) {
+	    public User createUser(@Valid @RequestBody User user) {
 	    	System.out.println("createUser");
-	        return userRepository.save(note);
+	        return userRepository.save(user);
 	    }
 
 	    @PutMapping("/users/{id}")

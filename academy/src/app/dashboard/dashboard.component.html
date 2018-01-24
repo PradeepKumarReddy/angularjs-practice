@@ -22,6 +22,10 @@
     <tab *ngFor="let tab of tabs" heading={{tab.name}} (select)="onTabSelected(tab.name)">
    	</tab>
 </tabset>
+
+<div class="form-group">
+      <button [disabled]="loading" class="btn btn-primary" (click)="navigateToLogin()">Login</button>
+</div>
 <!-- <ngb-tabset>
     <ngb-tab *ngFor="let tab of tabs" title={{tab.name}} (select)="onTabSelected(tab.name)">
     </ngb-tab>

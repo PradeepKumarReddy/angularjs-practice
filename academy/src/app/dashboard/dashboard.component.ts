@@ -17,14 +17,13 @@ import { RouterModule, Routes, Router } from '@angular/router';
   ]
 })
 
-
+// {name :'Login', link : '/login'}
 export class DashboardComponent implements OnInit {
   tabs : Tab[];
   initial_tabs: Tab[] = [
   {name : 'Home', link : '/home'},
   {name : 'Services', link : '/services' },
-  {name :'AboutUs', link : '/aboutus'},
-  {name :'Login', link : '/login'},
+  {name :'AboutUs', link : '/aboutus'}
   ]; 
 
   constructor(private router: Router) { }
@@ -65,6 +64,10 @@ export class DashboardComponent implements OnInit {
                 break;
             }
     
+  }
+
+  navigateToLogin() {
+    this.router.navigate(['/login']);
   }
 
 /**
